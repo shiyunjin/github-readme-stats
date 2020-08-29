@@ -84,7 +84,7 @@ async function fetchTopLanguages(username) {
       };
     }, {});
 
-  const topLangs = Object.keys(repoNodes)
+  const topLangs = Object.values(repoNodes)
     .slice(0, 5)
     .reduce((result, key) => {
       result[key] = repoNodes[key];
