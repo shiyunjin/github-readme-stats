@@ -90,7 +90,8 @@ const renderTopLanguages = (topLangs, options = {}) => {
     .sort((a, b) => b.size - a.size)
     .filter((lang) => {
       return !langsToHide[lowercaseTrim(lang.name)];
-    });
+    })
+    .slice(0, 5);
 
   const totalLanguageSize = langs.reduce((acc, curr) => {
     return acc + curr.size;
